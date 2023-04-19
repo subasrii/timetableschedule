@@ -1,0 +1,89 @@
+
+
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+             background-color: rgb(200, 234, 243);
+        }
+        thead,
+        tfoot {
+    background-color: rgb(164, 207, 240);
+    text-shadow: 1px 1px 1px rgb(240, 231, 231);
+        }
+        thead th,
+        tfoot th,
+        tfoot  td{
+            background: linear-gradient(to bottom,rgba(116, 205, 225, 0.1),rgba(0,0,0,0.5));
+            border:3px solid rgb(89, 149, 199)
+        }
+        tbody tr:nth-child(odd){
+            background-color: rgb(121, 237, 225);
+        }
+        tbody tr:nth-child(even){
+            background-color: rgb(102, 213, 213);
+        }
+        tbody tr{
+            background-image: url();
+        }
+    table{
+        background-color: rgb(9, 10, 10);
+    }
+       </style>
+    <body>
+        <div class="container mt-4">
+            <table align="center" border="1" width="50%">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>sno</th>
+                        <th>claassname</th>
+                        <th>staffname</th>
+                        <th>periodtime</th>
+                        <th>department</th>
+                        <th>semester</th>
+                        <th>year</th>
+                        <th>section</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (data.length)
+                    {
+                        for(var i=0;i<data.length;i++)
+                        {
+                            %>
+                            <tr>
+                                <th scope="row"><%=data[i].sno%></th>
+                                <td><%=data[i].classname %></td>
+                                <td><%=data[i].staffname %></td>
+                                <td><%=data[i].periodtime %></td>
+                                <td><%=data[i].department %></td>
+                                <td><%=data[i].semester %></td>
+                                <td><%=data[i].year %></td>
+                                <td><%=data[i].section %></td>
+                               <td>
+                                <a href="clsupdate" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a href="clsdelete" class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                               </td>
+                            </tr>
+                            <br>
+                            <%
+                        }
+                    }
+                    else
+                    {
+                        %>
+                        <tr>
+                            <td>no data found</td>
+                        </tr>
+                  <%  } %>
+                 
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+    body{
+             background-color: rgb(200, 234, 243);
+        }
+    thead,
+    tfoot {
+background-color: rgb(255, 0, 170);
+text-shadow: 1px 1px 1px rgb(242, 237, 237);
+    }
+    thead th,
+    tfoot th,
+    tfoot  td{
+        background: linear-gradient(to bottom,rgba(194, 190, 190, 0.1),rgba(0,0,0,0.5));
+        border:3px solid rgb(199, 89, 199)
+    }
+    tbody tr:nth-child(odd){
+        background-color: rgb(244, 209, 243);
+    }
+    tbody tr:nth-child(even){
+        background-color: rgb(232, 203, 230);
+    }
+    tbody tr{
+        background-image: url();
+    }
+table{
+    background-color: rgb(9, 10, 10);
+}
+   </style>
+ 
+   
+    <body align="center">
+        <div class="container mt-4">
+          <table align="center" border="1" width="50%">
+                <thead class="thead-dark">
+                    <tr align="center">
+                        <th>sno</th>
+                        <th>username</th>
+                        <th>category</th>
+                        <th>subject</th>
+                        <th>message</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <% if (data.length)
+                    {
+                        for(var i=0;i<data.length;i++)
+                        {
+                            %>
+                            <tr>
+                                <th scope="row"><%=data[i].sno %></th>
+                                <td><%=data[i].username%></td>
+                                <td><%=data[i].category%></td>
+                                <td><%=data[i].subject%></td>
+                                <td><%=data[i].message%></td>
+                               <td>
+                                <a href="feedbackupdate" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a href="feedbackdelete" class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                               </td>
+                            </tr>
+                            <br>
+                            <%
+                        }
+                    }
+                    else
+                    {
+                        %>
+                        <tr>
+                            <td>no data found</td>
+                        </tr>
+                  <%  } %>
+                 
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

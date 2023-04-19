@@ -1,0 +1,199 @@
+
+    
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"> -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <body class="bg-primary" style="background-image:url('img/bs.jpeg')" width="300px" height="100px">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3" >
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="background-image:url('img/m.jpeg')" width="300px" height="1000px">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-5">staff registration</h2>
+    
+                  <form action="staffsave" method="post">
+                    <label class="form-label" for="form3Example1cg">staffid</label>
+                    <div class="form-outline mb-4">
+                      <input type="text" id="staffid" name="staffid" class="form-control form-control-lg" />
+                    </div>
+
+
+                    <label class="form-label" for="form3Example1cg">staffName</label>
+                    <div class="form-outline mb-4">
+                      <input type="text" id="staffname" name="staffname" class="form-control form-control-lg" />
+                    </div>
+
+                    <label class="form-label" for="form3Example3cg">Department</label>
+                    <div class="form-outline mb-4">
+                      <input type="text" id="department" name="department" class="form-control form-control-lg" />
+                    </div>
+
+                    <label class="form-label" for="form3Example3cg">Email</label>
+                    <div class="form-outline mb-4">
+                      <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                    </div>
+
+                    <label class="form-label" for="form3Example3cg">office number</label>
+                    <div class="form-outline mb-4">
+                      <input type="number" id="officenumber" name="officenumber" class="form-control form-control-lg" />
+                    </div>
+
+                    <label class="form-label" for="form3Example4cg">Password</label>
+                    <div class="form-outline mb-4">
+                      <input type="password" id="password" class="form-control form-control-lg" />
+                    </div>
+
+                    <label class="form-label" for="form3Example4cdg">confirm password</label>
+                     <div class="form-outline mb-4">
+                      <input type="password" id="confirmpassword" class="form-control form-control-lg" />
+                    </div>
+                   
+                    <label class="form-label" for="form3Example4cdg">position</label>
+                     <div class="form-outline mb-4">
+                      <select class="form-control form-control-lg" id="position" name="position"/>
+                      <option>lecture</option>
+                      <option>hod</option>
+                     </select>
+                      
+                    </div>
+    
+                    <div class="d-flex justify-content-center">
+                        <style>
+                           * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1b2845;
+	background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 500ms;
+}
+
+button:before {
+	content: 'submit';
+	color: rgba(255,255,255,0.5);
+	font-size: 16px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 140px;
+	height: 40px;
+	background-color: #1b2845;
+	background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+	transition: 500ms;
+}
+
+button:hover {
+	background-position: right;
+}
+
+button:hover:before {
+	color: rgba(255,255,255,0.8);
+}
+
+button:focus {
+	outline: none;
+}
+                
+                        </style>
+                     <button>
+                        <input type="submit" name="submit">
+                      </button> 
+                    </div>
+    
+                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                        class="fw-bold text-body"><u>Login here</u></a></p>
+    
+                  </form>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+<!-- 
+            <form action="staffsave" align="center" method="post">
+    
+                        <div class="form-group">
+                            <label class="form-label">staffid</label>
+                            <input type="text" id="staffid" name="staffid" ><br/>
+                            <label>staff Name</label>
+                            <input type="text" id="staffname" name="staffname" placeholder="enter the staffname"><br/>
+                            <label>department</label>
+                            <input type="text" id="department" name="department" ><br/>
+                            <label>email</label>
+                            <input type="email" id="email" name="email" ><br/>
+                            <label>officenumber</label>
+                            <input type="number" id="officenumber" name="officenumber" ><br/>
+                            <label>password</label>
+                            <input type="password" id="password" name="password" ><br/>
+                            <label>confirmpassword</label>
+                            <input type="password" id="confirmpassword" name="confirmpassword" ><br/>
+                            <label>position</label>
+                            <select id="postion" name="postion">
+                                <option>lecture</option>
+                                <option>hod</option>
+                            </select>
+                            <br>
+                            <input type="submit" name="submit">`
+                            <input type="reset">
+        
+
+
+</form>
+</div>
+
+</div>
+</div>
+
+</body>
+</html> -->
